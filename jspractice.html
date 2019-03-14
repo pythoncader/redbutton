@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title> JavaScript Practice </title>
+		<script>
+var name = prompt('Please give your first name', 'Tessa')
+var lcname = name.toLowerCase()
+if(lcname == 'tessa'){
+    alert('Hello '+ name);
+} if (lcname=='joshua') {
+	alert('Hello '+ name);
+} else{
+    alert('Go away ' + name);
+};
+
+function start(){
+var age = "12 years old, almost 13";
+var name = "Cade Rigby";
+alert(name + " is " + age);
+}
+function math(){
+
+var math = 133 * 5324 - -53400000000000000000000000000000000000000000000 / 44 - 123;
+
+alert(math);
+
+}
+function question(){
+var question = prompt("What are my favorite colors?");
+if(question == "blue") {
+alert("You know me very well, my friend.");
+}else if(question == "orange") {
+alert("You know me very well, my friend.")
+}else{
+alert("Think Boise State");
+}
+}//end function
+
+function rate(){
+var q = prompt("How much do you like JavaScript 1 - 10?");
+if(q < 4) {
+alert("I'll try and make things more exciting!");
+} else if (q < 7) {
+alert("Just wait it gets better!");
+} else {
+alert("You're going to love the stuff coming up!");
+}
+}//end function
+function change(){
+var edit = document.getElementById("find");
+edit.innerHTML = "This Page is Full of Magic!";
+}
+var pass = 1;
+function toggle(){
+var twitch = document.getElementById("lightning");
+if(pass == 1){
+twitch.innerHTML = "<center>You didn't see anything...</center>";
+pass=2;
+}else if (pass == 2){
+twitch.innerHTML = "<center><img src='https://coolshirtpros--cadencerigby.repl.co/smile_1.png'/></center>";
+pass = 3;
+}else if (pass == 3){
+	twitch.innerHTML = "<center>Wait, it did it again!</center>"
+pass = 4;
+}else if (pass == 4){
+	twitch.innerHTML = "<center><img src='project.jpg'></center>"
+pass=0	
+} else {
+twitch.innerHTML = "<center>This text may change</center>";
+pass = 1;
+}
+}//end function toggle
+function count(){
+	var count = 1;
+while(count < 50) {
+	alert(count);
+	count = count + 2;
+}
+}
+function numbers(){
+for(var i=0; i<12; i+=2) { 
+alert(i); 
+}
+}
+var games = ["Mario", "Tetris", "Metroid", "baseball", 61];
+
+var sentence ="254340000000000000000000000";
+
+var array = [];
+for (var i = 0; i < sentence.length; i++){
+if(sentence[i] == "0") {
+array.push(sentence[i]);
+}
+}
+var shirt = {color: "green", price: "$15.00", size: "XL or small", details: "has a joke on it"};
+function obj(){
+var ask = prompt("What do you want to know about my shirt? (color, price, size or details):");
+alert("This shirt's " + ask + " is " + shirt[ask]);
+}
+function morph(){
+	var box = document.getElementById("box");
+	box.style.backgroundColor = "black";
+box.style.border = "12px ridge yellow";
+box.innerHTML = "Did you just see that?!";
+} function morphagain(){
+	var box = document.getElementById("box")
+	box.style.backgroundColor = "fuchsia";
+	box.style.border = "12px ridge Lime"
+}
+function dontpushtheredbutton(){
+	var explosionmaker = document.getElementById("explosion");
+    var explosion =1;
+    if (explosion=1) {
+    	explosionmaker.innerHTML = "<img src='explosion1.jpg'>";
+    	explosion = 2;
+    };
+    if (explosion=2) {
+    	explosionmaker.innerHTML = "<img src='explosion2.jpg'>";
+    	explosion = 3;
+    }; 
+    if (explosion=3) {
+    	explosionmaker.innerHTML = "<img src='explosion3.jpg'>";
+    	explosion = 4;
+    };
+    if (explosion = 4) {
+    	explosionmaker.innerHTML = "<img src='explosion4.jpg'>"
+    };
+}
+
+var c = 0;
+function myCounter() {
+  document.getElementById("demo").innerHTML = ++c;
+}
+		</script>
+		<style>
+#box{
+color: orange;
+background-color: green;
+height: 250px;
+width: 250px;
+}
+		</style>
+	</head>
+	<body>
+		<div>
+There are <script>document.writeln(array.length);</script> 0's in the sentence: "<script>document.writeln(sentence);</script>"
+		</div>
+		<input type="button" onclick="morph()" value="Change the Box">
+		<input type="button" onclick="morphagain()" value="Change the Box again">
+		<input type="button" onclick="obj()" value="object">
+		<input type="button" onclick="numbers()" value="For Loop">
+		<input type="button" onclick="count()" value="While Loop">
+		<input type="button" onclick="start()" value="Click Me">
+		<input type="button" onclick="math()" value="Math Time">
+		<input type="button" onclick="question()" value="Favorite Color">
+		<input type="button" onclick="change()" value="Magic Button">
+		<input type="button" onclick="rate()" value="JavaScript Rating">
+		<input type="button" onclick="toggle()" value="Change Button">
+		<center><div id="find">Green is the way to go.</div></center>
+		<div id="rotate">This text may change, even into a picture</div>
+		A game I like is: <span><script>document.writeln(games[0]);</script></span>
+		<div id="box">Hello, my website is almost finished</div>
+		<div id="lightning">
+			<center>
+				<p>This text may change</p>
+			</center>
+		</div>
+		<div id="explosion">
+			<span id="redbuttonpressing"><button onclick="dontpushtheredbutton()"><img src="red_button.png"></button></span>
+			<button onclick="setTimeout(dontpushtheredbutton, Try);">Try it</button>
+			<p>A script on this page starts this clock:</p>
+			<p style="font-size:55px" id="demo"></p>
+			<p>You've been not pushing since: <span id="timer"></span></p>
+		</div>
+		<button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
+		<p id="demo">Click on the button above and I will count forever.</p>
+		<button onClick="clearInterval(myTimer)">Stop counter!</button>
+	</body>
+</html>
